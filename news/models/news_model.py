@@ -10,7 +10,7 @@ class News(models.Model):
     content = models.TextField()
     created_at = models.DateField()
     image = models.ImageField(
-        upload_to="img", null=True, blank=True
+        upload_to="img/", null=True, blank=True
     )
     author = models.ForeignKey(
         Users, on_delete=models.CASCADE, related_name="news"

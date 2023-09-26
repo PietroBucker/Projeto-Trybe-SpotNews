@@ -36,12 +36,14 @@ def create_category(request):
 def create_news(request):
     form = CreateNewsModelForm()
     if request.method == "POST":
-        form = CreateNewsModelForm(request.POST)
-        print(form.cleaned_data())
+        form = CreateNewsModelForm(request.POST, request.FILES)
+
         if form.is_valid():
-            
-            teste = News.objects.create(**form.cleaned_data)
-            print(teste)
+            # news_instance = form.save(commit=False)
+            # news_instance.save()
+            # news_instance.categories.set(form.cleaned_data["categories"])
+
+            form.save()
             return redirect("home-page")
 
     context = {"form": form}
