@@ -7,7 +7,7 @@ from news.models.news_model import News
 
 
 class CreateCategoryModelForm(forms.Form):
-    name = forms.CharField(max_length=200, required=True, label="nome")
+    name = forms.CharField(max_length=200, required=True, label="Nome")
 
 
 class CreateNewsModelForm(forms.ModelForm):
