@@ -6,8 +6,14 @@ from news.models.category_model import Categories
 from news.models.news_model import News
 
 
-class CreateCategoryModelForm(forms.Form):
-    name = forms.CharField(max_length=200, required=True, label="Nome")
+class CreateCategoryModelForm(forms.ModelForm):
+    class Meta:
+        model = Categories
+        fields = ["name"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["name"].label = "Nome"
 
 
 class CreateNewsModelForm(forms.ModelForm):
