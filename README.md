@@ -4,6 +4,8 @@
 - Escrever aplicações usando Django e Django Rest Framework
 - Desenvolver uma aplicação que usa a arquitetura Model-View-Template
 - Trabalhar com banco de dados MYSQL
+
+  
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto.
 É essencial que você preencha esse documento por conta própria, ok?
